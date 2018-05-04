@@ -146,8 +146,10 @@
           if(Math.round(elapsed) == elapsed) {
             elapsed += '.0';
           }
-          else if(actualNext - Math.floor(elapsed) < 0) {
+          else if(actualNext - Math.floor(elapsed) == 0) {
             darkenLights();
+          }
+          else if(actualNext - Math.floor(elapsed) < 0) {
             start = new Date().getTime();
             killed = killed + 1;
             actualNext = 1986;
